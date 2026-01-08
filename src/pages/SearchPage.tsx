@@ -3,9 +3,9 @@ import { useUser } from '@/context/UserContext';
 import { WelcomeScreen } from '@/components/WelcomeScreen';
 import { Header } from '@/components/Header';
 import { MusicPlayer } from '@/components/MusicPlayer';
-import { Home } from '@/pages/Home';
+import { Search } from '@/pages/Search';
 
-const Index = () => {
+const SearchPage = () => {
   const { userName } = useUser();
 
   if (!userName) {
@@ -16,11 +16,11 @@ const Index = () => {
     <div className="min-h-screen pb-24">
       <Header />
       <main className="pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <Home />
+        <Search />
       </main>
       <MusicPlayer />
     </div>
   );
 };
 
-export default Index;
+export default SearchPage;
